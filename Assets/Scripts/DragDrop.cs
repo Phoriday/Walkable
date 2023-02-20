@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DragDrop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool drag;
+    public void OnMouseDown()
     {
-        
+        drag= true;
+    }
+    public void OnMouseUp()
+    {
+        drag = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        if (drag)
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePos);
+        }
     }
 }
