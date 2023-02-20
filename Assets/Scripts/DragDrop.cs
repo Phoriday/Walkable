@@ -13,6 +13,7 @@ public class DragDrop : MonoBehaviour
     public void OnMouseUp()
     {
         drag = false;
+        UIManager.activeAdder=false;
     }
 
     public void Update()
