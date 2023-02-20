@@ -1,31 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Spawner : MonoBehaviour
+public class Spawner : MonoBehaviour, IPointerDownHandler, IDragHandler
 {
     public GameObject objectToSpawn;
     private GameObject spawnedGameObject;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         spawnedGameObject = Instantiate(objectToSpawn, mousePos, Quaternion.identity);
     }
 
-    public void OnMouseDrag()
+    public void OnDrag(PointerEventData eventData)
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - spawnedGameObject.transform.position;
         spawnedGameObject.transform.Translate(mousePos);
