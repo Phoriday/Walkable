@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path:
+    path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 4c6fdcf7fe3ba4f359dc33212350ec86
+  - enabled: 1
+    path: Assets/Scene1.unity
+    guid: 56fed4fd5be131047aace60d86e2035b
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: b905c1832387d4603adc885b03f54cf7, type: 2}

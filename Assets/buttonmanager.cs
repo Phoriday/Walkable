@@ -32,4 +32,9 @@ public class buttonmanager : MonoBehaviour
     {
         SceneManager.LoadScene("Menu");
     }
+
+    public void GoToGame()
+    {
+        SceneManager.LoadScene("Scene1");
+    }
 }
