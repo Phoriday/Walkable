@@ -19,4 +19,5 @@ public class Spawner : MonoBehaviour, IPointerDownHandler, IDragHandler
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - spawnedGameObject.transform.position;
         spawnedGameObject.transform.Translate(mousePos);
     }
+
 }
